@@ -1,0 +1,9 @@
+{
+  "common": {"appName": "Khargony", "loading": "Загрузка...", "error": "Произошла ошибка", "search": "Поиск"},
+  "auth": {"login": "Войти", "register": "Регистрация", "email": "Эл. почта", "password": "Пароль"},
+  "home": {"title": "Открыть", "greeting": "Добро пожаловать в Khargony", "featured": "Рекомендуемое"},
+  "explore": {"title": "Исследовать", "searchPlaceholder": "Поиск места...", "filters": "Фильтры"},
+  "chat": {"title": "Ваш умный помощник", "placeholder": "Спросите что-нибудь..."},
+  "profile": {"title": "Профиль", "points": "Очки", "level": "Уровень"},
+  "categories": {"all": "Все", "culture": "Культура", "food": "Еда", "adventure": "Приключение"}
+}

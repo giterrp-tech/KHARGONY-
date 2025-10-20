@@ -1,0 +1,9 @@
+{
+  "common": {"appName": "Khargony", "loading": "로딩 중...", "error": "오류가 발생했습니다", "search": "검색"},
+  "auth": {"login": "로그인", "register": "등록", "email": "이메일", "password": "비밀번호"},
+  "home": {"title": "발견", "greeting": "Khargony에 오신 것을 환영합니다", "featured": "추천"},
+  "explore": {"title": "탐색", "searchPlaceholder": "장소 검색...", "filters": "필터"},
+  "chat": {"title": "스마트 어시스턴트", "placeholder": "무엇이든 물어보세요..."},
+  "profile": {"title": "프로필", "points": "포인트", "level": "레벨"},
+  "categories": {"all": "전체", "culture": "문화", "food": "음식", "adventure": "모험"}
+}
