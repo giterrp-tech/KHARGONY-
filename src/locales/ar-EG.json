@@ -1,0 +1,155 @@
+{
+  "common": {
+    "appName": "خرجوني",
+    "loading": "جاري التحميل...",
+    "error": "حدث خطأ",
+    "retry": "حاول تاني",
+    "cancel": "إلغاء",
+    "confirm": "تأكيد",
+    "save": "حفظ",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "close": "إغلاق",
+    "search": "دور",
+    "filter": "فلتر",
+    "clear": "مسح"
+  },
+  "auth": {
+    "login": "دخول",
+    "register": "حساب جديد",
+    "logout": "خروج",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "name": "الاسم",
+    "forgotPassword": "نسيت كلمة المرور؟",
+    "noAccount": "مش عندك حساب؟",
+    "hasAccount": "عندك حساب؟",
+    "signInWith": "دخول بـ",
+    "welcomeBack": "أهلاً بيك تاني",
+    "createAccount": "حساب جديد",
+    "continueWith": "كمل بـ"
+  },
+  "home": {
+    "title": "اكتشف",
+    "greeting": "أهلاً بيك في خرجوني",
+    "featured": "مميز",
+    "popular": "مشهور",
+    "nearby": "قريب منك",
+    "weather": "الطقس النهاردة",
+    "suggestion": "اقتراحنا ليك"
+  },
+  "explore": {
+    "title": "استكشف",
+    "searchPlaceholder": "دور على مكان...",
+    "filters": "فلاتر",
+    "category": "الفئة",
+    "priceLevel": "السعر",
+    "rating": "التقييم",
+    "distance": "المسافة",
+    "showMap": "شوف الخريطة",
+    "showList": "شوف القايمة",
+    "noResults": "مافيش نتايج",
+    "resultsCount": "{{count}} مكان"
+  },
+  "chat": {
+    "title": "مساعدك الذكي",
+    "placeholder": "اسأل عن أي حاجة...",
+    "suggestions": "اقتراحات سريعة",
+    "romantic": "رومانسي",
+    "adventure": "مغامرة",
+    "family": "عائلي",
+    "budget": "معاك كام؟",
+    "speaking": "بيتكلم...",
+    "listening": "بيسمع...",
+    "voiceInput": "استخدم صوتك",
+    "stopVoice": "وقف الصوت"
+  },
+  "profile": {
+    "title": "حسابك",
+    "points": "النقاط",
+    "level": "المستوى",
+    "visits": "زيارة",
+    "achievements": "الإنجازات",
+    "settings": "الإعدادات",
+    "language": "اللغة",
+    "theme": "المظهر",
+    "notifications": "الإشعارات",
+    "editProfile": "تعديل الحساب",
+    "visitHistory": "تاريخ الزيارات",
+    "pointsToNextLevel": "{{points}} نقطة للمستوى الجاي"
+  },
+  "favorites": {
+    "title": "المفضلة",
+    "empty": "مافيش أماكن مفضلة",
+    "addFirst": "ضيف أول مكان ليك",
+    "removed": "اتشال من المفضلة",
+    "added": "اتضاف للمفضلة"
+  },
+  "placeDetail": {
+    "getDirections": "اعرف الطريق",
+    "call": "اتصل",
+    "website": "الموقع",
+    "hours": "مواعيد العمل",
+    "priceRange": "الأسعار",
+    "rating": "التقييم",
+    "reviews": "تقييم",
+    "addToFavorites": "ضيف للمفضلة",
+    "removeFromFavorites": "شيل من المفضلة",
+    "markVisited": "كنت هنا",
+    "alreadyVisited": "زرته قبل كدة",
+    "sharePlace": "شارك المكان",
+    "reportIssue": "بلغ عن مشكلة"
+  },
+  "weather": {
+    "sunny": "مشمس",
+    "cloudy": "غايم",
+    "rainy": "ممطر",
+    "hot": "حر",
+    "cool": "لطيف",
+    "perfect": "جو جميل",
+    "suggestion": "الطقس مناسب لـ"
+  },
+  "categories": {
+    "all": "الكل",
+    "culture": "ثقافة",
+    "food": "أكل",
+    "adventure": "مغامرة",
+    "shopping": "تسوق",
+    "relax": "استرخاء",
+    "romantic": "رومانسي",
+    "family": "عائلي",
+    "nature": "طبيعة"
+  },
+  "price": {
+    "low": "رخيص",
+    "medium": "متوسط",
+    "high": "غالي",
+    "free": "مجاني"
+  },
+  "achievements": {
+    "locked": "محجوز",
+    "unlocked": "فتحته!",
+    "progress": "التقدم",
+    "reward": "المكافأة",
+    "congratulations": "مبروك!"
+  },
+  "onboarding": {
+    "welcome": "أهلاً بيك في خرجوني",
+    "slide1Title": "اختار مكانك بسهولة",
+    "slide1Desc": "اكتشف أحسن الأماكن في مصر",
+    "slide2Title": "وفر وقتك وفلوسك",
+    "slide2Desc": "اقتراحات على حسب ميزانيتك",
+    "slide3Title": "خروجتك تناسب مزاجك",
+    "slide3Desc": "مساعد ذكي يفهمك",
+    "skip": "تخطي",
+    "next": "التالي",
+    "getStarted": "يلا نبدأ"
+  },
+  "errors": {
+    "networkError": "مافيش نت",
+    "serverError": "مشكلة في السيرفر",
+    "notFound": "مش موجود",
+    "unauthorized": "مش مصرح",
+    "tryAgain": "حاول تاني"
+  }
+}
