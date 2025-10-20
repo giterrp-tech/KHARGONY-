@@ -1,19 +1,22 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '@/hooks/useAuth';
 import logo from '@/assets/logo.png';
 import onboardingBg from '@/assets/onboarding-bg.png';
 
 const Splash = () => {
   const navigate = useNavigate();
+  const { user, loading } = useAuth();
 
   useEffect(() => {
+    if (loading) return; // Wait for auth state to load
+
     const hasSeenOnboarding = localStorage.getItem('hasSeenOnboarding');
-    const isLoggedIn = localStorage.getItem('isLoggedIn');
 
     const timer = setTimeout(() => {
       if (!hasSeenOnboarding) {
         navigate('/onboarding');
-      } else if (!isLoggedIn) {
+      } else if (!user) {
         navigate('/login');
       } else {
         navigate('/');
@@ -21,7 +24,7 @@ const Splash = () => {
     }, 2500);
 
     return () => clearTimeout(timer);
-  }, [navigate]);
+  }, [navigate, user, loading]);
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center overflow-hidden relative">
