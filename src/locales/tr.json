@@ -1,0 +1,9 @@
+{
+  "common": {"appName": "Khargony", "loading": "Yükleniyor...", "error": "Bir hata oluştu", "search": "Ara"},
+  "auth": {"login": "Giriş yap", "register": "Kayıt ol", "email": "E-posta", "password": "Şifre"},
+  "home": {"title": "Keşfet", "greeting": "Khargony'ye hoş geldiniz", "featured": "Öne çıkan"},
+  "explore": {"title": "Keşfet", "searchPlaceholder": "Yer ara...", "filters": "Filtreler"},
+  "chat": {"title": "Akıllı asistanınız", "placeholder": "Bir şey sorun..."},
+  "profile": {"title": "Profil", "points": "Puanlar", "level": "Seviye"},
+  "categories": {"all": "Hepsi", "culture": "Kültür", "food": "Yemek", "adventure": "Macera"}
+}

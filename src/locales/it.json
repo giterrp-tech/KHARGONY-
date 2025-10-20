@@ -1,0 +1,9 @@
+{
+  "common": {"appName": "Khargony", "loading": "Caricamento...", "error": "Si è verificato un errore", "search": "Cerca"},
+  "auth": {"login": "Accedi", "register": "Registrati", "email": "Email", "password": "Password"},
+  "home": {"title": "Scopri", "greeting": "Benvenuto su Khargony", "featured": "In evidenza"},
+  "explore": {"title": "Esplora", "searchPlaceholder": "Cerca un luogo...", "filters": "Filtri"},
+  "chat": {"title": "Il tuo assistente intelligente", "placeholder": "Chiedi qualcosa..."},
+  "profile": {"title": "Profilo", "points": "Punti", "level": "Livello"},
+  "categories": {"all": "Tutto", "culture": "Cultura", "food": "Cibo", "adventure": "Avventura"}
+}

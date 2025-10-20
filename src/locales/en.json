@@ -1,0 +1,155 @@
+{
+  "common": {
+    "appName": "Khargony",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Try again",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "search": "Search",
+    "filter": "Filter",
+    "clear": "Clear"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "email": "Email",
+    "password": "Password",
+    "name": "Name",
+    "forgotPassword": "Forgot password?",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "signInWith": "Sign in with",
+    "welcomeBack": "Welcome back",
+    "createAccount": "Create account",
+    "continueWith": "Continue with"
+  },
+  "home": {
+    "title": "Discover",
+    "greeting": "Welcome to Khargony",
+    "featured": "Featured",
+    "popular": "Popular",
+    "nearby": "Nearby",
+    "weather": "Today's weather",
+    "suggestion": "Our suggestion"
+  },
+  "explore": {
+    "title": "Explore",
+    "searchPlaceholder": "Search for a place...",
+    "filters": "Filters",
+    "category": "Category",
+    "priceLevel": "Price",
+    "rating": "Rating",
+    "distance": "Distance",
+    "showMap": "Show map",
+    "showList": "Show list",
+    "noResults": "No results found",
+    "resultsCount": "{{count}} places"
+  },
+  "chat": {
+    "title": "Your Smart Assistant",
+    "placeholder": "Ask anything...",
+    "suggestions": "Quick suggestions",
+    "romantic": "Romantic",
+    "adventure": "Adventure",
+    "family": "Family",
+    "budget": "What's your budget?",
+    "speaking": "Speaking...",
+    "listening": "Listening...",
+    "voiceInput": "Use voice",
+    "stopVoice": "Stop voice"
+  },
+  "profile": {
+    "title": "Profile",
+    "points": "Points",
+    "level": "Level",
+    "visits": "visits",
+    "achievements": "Achievements",
+    "settings": "Settings",
+    "language": "Language",
+    "theme": "Theme",
+    "notifications": "Notifications",
+    "editProfile": "Edit profile",
+    "visitHistory": "Visit history",
+    "pointsToNextLevel": "{{points}} points to next level"
+  },
+  "favorites": {
+    "title": "Favorites",
+    "empty": "No favorite places",
+    "addFirst": "Add your first place",
+    "removed": "Removed from favorites",
+    "added": "Added to favorites"
+  },
+  "placeDetail": {
+    "getDirections": "Get directions",
+    "call": "Call",
+    "website": "Website",
+    "hours": "Hours",
+    "priceRange": "Price range",
+    "rating": "Rating",
+    "reviews": "reviews",
+    "addToFavorites": "Add to favorites",
+    "removeFromFavorites": "Remove from favorites",
+    "markVisited": "I've been here",
+    "alreadyVisited": "Already visited",
+    "sharePlace": "Share place",
+    "reportIssue": "Report issue"
+  },
+  "weather": {
+    "sunny": "Sunny",
+    "cloudy": "Cloudy",
+    "rainy": "Rainy",
+    "hot": "Hot",
+    "cool": "Cool",
+    "perfect": "Perfect weather",
+    "suggestion": "Perfect weather for"
+  },
+  "categories": {
+    "all": "All",
+    "culture": "Culture",
+    "food": "Food",
+    "adventure": "Adventure",
+    "shopping": "Shopping",
+    "relax": "Relax",
+    "romantic": "Romantic",
+    "family": "Family",
+    "nature": "Nature"
+  },
+  "price": {
+    "low": "Low",
+    "medium": "Medium",
+    "high": "High",
+    "free": "Free"
+  },
+  "achievements": {
+    "locked": "Locked",
+    "unlocked": "Unlocked!",
+    "progress": "Progress",
+    "reward": "Reward",
+    "congratulations": "Congratulations!"
+  },
+  "onboarding": {
+    "welcome": "Welcome to Khargony",
+    "slide1Title": "Choose your place easily",
+    "slide1Desc": "Discover the best places in Egypt",
+    "slide2Title": "Save time and money",
+    "slide2Desc": "Suggestions based on your budget",
+    "slide3Title": "Outing matches your mood",
+    "slide3Desc": "Smart assistant that understands you",
+    "skip": "Skip",
+    "next": "Next",
+    "getStarted": "Get started"
+  },
+  "errors": {
+    "networkError": "Network error",
+    "serverError": "Server error",
+    "notFound": "Not found",
+    "unauthorized": "Unauthorized",
+    "tryAgain": "Try again"
+  }
+}

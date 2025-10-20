@@ -1,0 +1,9 @@
+{
+  "common": {"appName": "Khargony", "loading": "लोड हो रहा है...", "error": "एक त्रुटि हुई", "search": "खोजें"},
+  "auth": {"login": "लॉगिन", "register": "रजिस्टर करें", "email": "ईमेल", "password": "पासवर्ड"},
+  "home": {"title": "खोजें", "greeting": "Khargony में आपका स्वागत है", "featured": "विशेष"},
+  "explore": {"title": "अन्वेषण करें", "searchPlaceholder": "स्थान खोजें...", "filters": "फ़िल्टर"},
+  "chat": {"title": "आपका स्मार्ट सहायक", "placeholder": "कुछ भी पूछें..."},
+  "profile": {"title": "प्रोफ़ाइल", "points": "अंक", "level": "स्तर"},
+  "categories": {"all": "सभी", "culture": "संस्कृति", "food": "भोजन", "adventure": "साहसिक"}
+}

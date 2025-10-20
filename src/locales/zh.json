@@ -1,0 +1,9 @@
+{
+  "common": {"appName": "Khargony", "loading": "加载中...", "error": "发生错误", "search": "搜索"},
+  "auth": {"login": "登录", "register": "注册", "email": "电子邮件", "password": "密码"},
+  "home": {"title": "发现", "greeting": "欢迎来到Khargony", "featured": "特色"},
+  "explore": {"title": "探索", "searchPlaceholder": "搜索地点...", "filters": "筛选"},
+  "chat": {"title": "您的智能助手", "placeholder": "问任何问题..."},
+  "profile": {"title": "个人资料", "points": "积分", "level": "等级"},
+  "categories": {"all": "全部", "culture": "文化", "food": "美食", "adventure": "冒险"}
+}
