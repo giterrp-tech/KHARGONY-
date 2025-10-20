@@ -2,18 +2,25 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Mail, Lock, Phone, Apple } from 'lucide-react';
+import { Mail, Lock, User } from 'lucide-react';
 import { toast } from 'sonner';
 import loginBg from '@/assets/login-bg.png';
+import {
+  signInWithEmail,
+  signUpWithEmail,
+  signInWithGoogle,
+  signInWithApple,
+} from '@/lib/firebaseAuth';
 
 const Login = () => {
   const [mode, setMode] = useState<'login' | 'register'>('login');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [phone, setPhone] = useState('');
+  const [displayName, setDisplayName] = useState('');
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!email || !password) {
@@ -21,23 +28,73 @@ const Login = () => {
       return;
     }
 
-    // Mock login/register
-    localStorage.setItem('isLoggedIn', 'true');
-    localStorage.setItem('userProfile', JSON.stringify({
-      name: 'مستخدم خرجوني',
-      email: email,
-      joinedAt: new Date().toISOString()
-    }));
+    if (mode === 'register' && !displayName) {
+      toast.error('من فضلك أدخل اسمك');
+      return;
+    }
 
-    toast.success(mode === 'login' ? 'تم تسجيل الدخول بنجاح!' : 'تم إنشاء الحساب بنجاح!');
-    navigate('/');
+    setLoading(true);
+
+    try {
+      if (mode === 'login') {
+        const result = await signInWithEmail(email, password);
+        if (result.success) {
+          toast.success('تم تسجيل الدخول بنجاح!');
+          navigate('/');
+        } else {
+          toast.error(result.error || 'فشل تسجيل الدخول');
+        }
+      } else {
+        const result = await signUpWithEmail(email, password, displayName);
+        if (result.success) {
+          toast.success('تم إنشاء الحساب بنجاح!');
+          navigate('/');
+        } else {
+          toast.error(result.error || 'فشل إنشاء الحساب');
+        }
+      }
+    } catch (error) {
+      toast.error('حدث خطأ غير متوقع');
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
   };
 
-  const handleSocialLogin = (provider: string) => {
-    // Mock social login
-    localStorage.setItem('isLoggedIn', 'true');
-    toast.success(`تم تسجيل الدخول عبر ${provider}!`);
-    navigate('/');
+  const handleGoogleLogin = async () => {
+    setLoading(true);
+    try {
+      const result = await signInWithGoogle();
+      if (result.success) {
+        toast.success('تم تسجيل الدخول عبر Google!');
+        navigate('/');
+      } else {
+        toast.error(result.error || 'فشل تسجيل الدخول');
+      }
+    } catch (error) {
+      toast.error('حدث خطأ غير متوقع');
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleAppleLogin = async () => {
+    setLoading(true);
+    try {
+      const result = await signInWithApple();
+      if (result.success) {
+        toast.success('تم تسجيل الدخول عبر Apple!');
+        navigate('/');
+      } else {
+        toast.error(result.error || 'فشل تسجيل الدخول');
+      }
+    } catch (error) {
+      toast.error('حدث خطأ غير متوقع');
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -69,6 +126,19 @@ const Login = () => {
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
+          {mode === 'register' && (
+            <div className="relative">
+              <User className="absolute right-3 top-3 w-5 h-5 text-white/70" />
+              <Input
+                type="text"
+                placeholder="الاسم"
+                value={displayName}
+                onChange={(e) => setDisplayName(e.target.value)}
+                className="pr-10 bg-white/10 border-white/30 text-white placeholder:text-white/60"
+              />
+            </div>
+          )}
+
           <div className="relative">
             <Mail className="absolute right-3 top-3 w-5 h-5 text-white/70" />
             <Input
@@ -79,19 +149,6 @@ const Login = () => {
               className="pr-10 bg-white/10 border-white/30 text-white placeholder:text-white/60"
             />
           </div>
-
-          {mode === 'register' && (
-            <div className="relative">
-              <Phone className="absolute right-3 top-3 w-5 h-5 text-white/70" />
-              <Input
-                type="tel"
-                placeholder="رقم الهاتف (اختياري)"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                className="pr-10 bg-white/10 border-white/30 text-white placeholder:text-white/60"
-              />
-            </div>
-          )}
 
           <div className="relative">
             <Lock className="absolute right-3 top-3 w-5 h-5 text-white/70" />
@@ -104,8 +161,13 @@ const Login = () => {
             />
           </div>
 
-          <Button type="submit" size="lg" className="w-full bg-white/10 border-2 border-white/40 text-white hover:bg-white/20">
-            {mode === 'login' ? 'تسجيل الدخول' : 'إنشاء حساب'}
+          <Button 
+            type="submit" 
+            size="lg" 
+            className="w-full bg-white/10 border-2 border-white/40 text-white hover:bg-white/20"
+            disabled={loading}
+          >
+            {loading ? 'جاري التحميل...' : (mode === 'login' ? 'تسجيل الدخول' : 'إنشاء حساب')}
           </Button>
         </form>
 
@@ -118,7 +180,8 @@ const Login = () => {
             variant="outline"
             size="lg"
             className="w-full bg-white/10 border-white/30 text-white hover:bg-white/20"
-            onClick={() => handleSocialLogin('Google')}
+            onClick={handleGoogleLogin}
+            disabled={loading}
           >
             <img 
               src="https://www.google.com/favicon.ico" 
@@ -132,9 +195,10 @@ const Login = () => {
             variant="outline"
             size="lg"
             className="w-full bg-white/10 border-white/30 text-white hover:bg-white/20"
-            onClick={() => handleSocialLogin('Apple')}
+            onClick={() => handleAppleLogin()}
+            disabled={loading}
           >
-            <Apple className="w-5 h-5 ml-2 fill-white" />
+            <User className="w-5 h-5 ml-2 fill-white" />
             {mode === 'login' ? 'تسجيل الدخول' : 'التسجيل'} بـ Apple
           </Button>
         </div>
