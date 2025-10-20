@@ -1,0 +1,314 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Egyptian-inspired color palette */
+    --background: 40 40% 98%;
+    --foreground: 30 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 30 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 15% 15%;
+
+    /* Warm Gold - Primary Egyptian Color */
+    --primary: 45 90% 55%;
+    --primary-foreground: 30 15% 15%;
+    --primary-glow: 45 100% 65%;
+
+    /* Turquoise - Secondary Egyptian Color */
+    --secondary: 174 72% 56%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 40 30% 94%;
+    --muted-foreground: 30 10% 45%;
+
+    /* Warm Orange/Camel - Accent */
+    --accent: 30 85% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 40 25% 88%;
+    --input: 40 25% 88%;
+    --ring: 45 90% 55%;
+
+    --radius: 1rem;
+
+    /* Custom gradients */
+    --gradient-egyptian: linear-gradient(135deg, hsl(45, 90%, 55%), hsl(174, 72%, 56%));
+    --gradient-warm: linear-gradient(135deg, hsl(30, 85%, 60%), hsl(15, 80%, 65%));
+    --gradient-hero: linear-gradient(180deg, hsl(40, 40%, 98%), hsl(45, 60%, 95%));
+    
+    /* Shadows */
+    --shadow-gold: 0 10px 40px -10px hsl(45 90% 55% / 0.3);
+    --shadow-soft: 0 4px 20px hsl(30 15% 15% / 0.08);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 30 25% 8%;
+    --foreground: 40 40% 98%;
+
+    --card: 30 20% 12%;
+    --card-foreground: 40 40% 98%;
+
+    --popover: 30 20% 12%;
+    --popover-foreground: 40 40% 98%;
+
+    --primary: 45 95% 60%;
+    --primary-foreground: 30 15% 15%;
+    --primary-glow: 45 100% 70%;
+
+    --secondary: 174 70% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 30 15% 18%;
+    --muted-foreground: 40 20% 65%;
+
+    --accent: 30 85% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 15% 20%;
+    --input: 30 15% 20%;
+    --ring: 45 90% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Enhanced Mobile-Optimized Animations */
+@layer utilities {
+  /* Smooth Fade In with Scale */
+  @keyframes fadeInScale {
+    from {
+      opacity: 0;
+      transform: translateY(20px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  /* Slide In from Right */
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Slide In from Left */
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Pulse Glow Effect */
+  @keyframes pulseGlow {
+    0%, 100% {
+      box-shadow: 0 0 15px hsl(45 90% 55% / 0.3);
+    }
+    50% {
+      box-shadow: 0 0 30px hsl(45 90% 55% / 0.5);
+    }
+  }
+
+  /* Bounce Animation */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Shimmer Loading Effect */
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+
+  /* Rotate In */
+  @keyframes rotateIn {
+    from {
+      opacity: 0;
+      transform: rotate(-10deg) scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: rotate(0) scale(1);
+    }
+  }
+
+  /* Float Animation */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  /* Animation Classes */
+  .animate-fade-in {
+    animation: fadeInScale 0.6s ease-out forwards;
+  }
+
+  .animate-slide-right {
+    animation: slideInRight 0.5s ease-out forwards;
+  }
+
+  .animate-slide-left {
+    animation: slideInLeft 0.5s ease-out forwards;
+  }
+
+  .animate-pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+
+  .animate-bounce-soft {
+    animation: bounce 2s ease-in-out infinite;
+  }
+
+  .animate-shimmer {
+    background: linear-gradient(
+      90deg,
+      hsl(40 30% 94%) 0%,
+      hsl(45 60% 90%) 50%,
+      hsl(40 30% 94%) 100%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite linear;
+  }
+
+  .animate-rotate-in {
+    animation: rotateIn 0.6s ease-out forwards;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Hover Effects */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-gold);
+  }
+
+  .hover-scale {
+    transition: transform 0.3s ease;
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+
+  .hover-glow {
+    transition: box-shadow 0.3s ease;
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 25px hsl(45 90% 55% / 0.4);
+  }
+
+  /* Image Effects */
+  .image-zoom {
+    overflow: hidden;
+  }
+
+  .image-zoom img {
+    transition: transform 0.5s ease;
+  }
+
+  .image-zoom:hover img {
+    transform: scale(1.1);
+  }
+
+  /* Card Effects */
+  .card-interactive {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .card-interactive:active {
+    transform: scale(0.98);
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    background: var(--gradient-egyptian);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Glass Morphism */
+  .glass {
+    background: hsl(0 0% 100% / 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .glass-dark {
+    background: hsl(30 20% 12% / 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  /* Smooth Scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Hide Scrollbar but keep functionality */
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
