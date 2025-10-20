@@ -1,0 +1,155 @@
+{
+  "common": {
+    "appName": "خرجوني",
+    "loading": "جارٍ التحميل...",
+    "error": "حدث خطأ",
+    "retry": "حاول مرة أخرى",
+    "cancel": "إلغاء",
+    "confirm": "تأكيد",
+    "save": "حفظ",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "close": "إغلاق",
+    "search": "بحث",
+    "filter": "تصفية",
+    "clear": "مسح"
+  },
+  "auth": {
+    "login": "تسجيل الدخول",
+    "register": "حساب جديد",
+    "logout": "تسجيل الخروج",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "name": "الاسم",
+    "forgotPassword": "نسيت كلمة المرور؟",
+    "noAccount": "ليس لديك حساب؟",
+    "hasAccount": "لديك حساب بالفعل؟",
+    "signInWith": "تسجيل الدخول بـ",
+    "welcomeBack": "مرحباً بعودتك",
+    "createAccount": "إنشاء حساب جديد",
+    "continueWith": "المتابعة بـ"
+  },
+  "home": {
+    "title": "اكتشف",
+    "greeting": "مرحباً بك في خرجوني",
+    "featured": "مميز",
+    "popular": "شائع",
+    "nearby": "قريب منك",
+    "weather": "الطقس اليوم",
+    "suggestion": "اقتراحنا لك"
+  },
+  "explore": {
+    "title": "استكشف",
+    "searchPlaceholder": "ابحث عن مكان...",
+    "filters": "تصفية",
+    "category": "الفئة",
+    "priceLevel": "السعر",
+    "rating": "التقييم",
+    "distance": "المسافة",
+    "showMap": "عرض الخريطة",
+    "showList": "عرض القائمة",
+    "noResults": "لا توجد نتائج",
+    "resultsCount": "{{count}} مكان"
+  },
+  "chat": {
+    "title": "مساعدك الذكي",
+    "placeholder": "اسأل عن أي شيء...",
+    "suggestions": "اقتراحات سريعة",
+    "romantic": "رومانسي",
+    "adventure": "مغامرة",
+    "family": "عائلي",
+    "budget": "ما هي ميزانيتك؟",
+    "speaking": "يتحدث...",
+    "listening": "يستمع...",
+    "voiceInput": "استخدم صوتك",
+    "stopVoice": "إيقاف الصوت"
+  },
+  "profile": {
+    "title": "الملف الشخصي",
+    "points": "النقاط",
+    "level": "المستوى",
+    "visits": "زيارة",
+    "achievements": "الإنجازات",
+    "settings": "الإعدادات",
+    "language": "اللغة",
+    "theme": "المظهر",
+    "notifications": "الإشعارات",
+    "editProfile": "تعديل الملف الشخصي",
+    "visitHistory": "سجل الزيارات",
+    "pointsToNextLevel": "{{points}} نقطة للمستوى التالي"
+  },
+  "favorites": {
+    "title": "المفضلة",
+    "empty": "لا توجد أماكن مفضلة",
+    "addFirst": "أضف أول مكان لك",
+    "removed": "تمت الإزالة من المفضلة",
+    "added": "تمت الإضافة إلى المفضلة"
+  },
+  "placeDetail": {
+    "getDirections": "احصل على الاتجاهات",
+    "call": "اتصل",
+    "website": "الموقع الإلكتروني",
+    "hours": "ساعات العمل",
+    "priceRange": "نطاق الأسعار",
+    "rating": "التقييم",
+    "reviews": "تقييم",
+    "addToFavorites": "أضف إلى المفضلة",
+    "removeFromFavorites": "إزالة من المفضلة",
+    "markVisited": "لقد كنت هنا",
+    "alreadyVisited": "تمت الزيارة سابقاً",
+    "sharePlace": "مشاركة المكان",
+    "reportIssue": "الإبلاغ عن مشكلة"
+  },
+  "weather": {
+    "sunny": "مشمس",
+    "cloudy": "غائم",
+    "rainy": "ممطر",
+    "hot": "حار",
+    "cool": "لطيف",
+    "perfect": "جو رائع",
+    "suggestion": "الطقس مناسب لـ"
+  },
+  "categories": {
+    "all": "الكل",
+    "culture": "ثقافة",
+    "food": "طعام",
+    "adventure": "مغامرة",
+    "shopping": "تسوق",
+    "relax": "استرخاء",
+    "romantic": "رومانسي",
+    "family": "عائلي",
+    "nature": "طبيعة"
+  },
+  "price": {
+    "low": "منخفض",
+    "medium": "متوسط",
+    "high": "مرتفع",
+    "free": "مجاني"
+  },
+  "achievements": {
+    "locked": "مقفل",
+    "unlocked": "مفتوح!",
+    "progress": "التقدم",
+    "reward": "المكافأة",
+    "congratulations": "تهانينا!"
+  },
+  "onboarding": {
+    "welcome": "مرحباً بك في خرجوني",
+    "slide1Title": "اختر مكانك بسهولة",
+    "slide1Desc": "اكتشف أفضل الأماكن في مصر",
+    "slide2Title": "وفر وقتك ومالك",
+    "slide2Desc": "اقتراحات بناءً على ميزانيتك",
+    "slide3Title": "نزهتك تناسب مزاجك",
+    "slide3Desc": "مساعد ذكي يفهمك",
+    "skip": "تخطي",
+    "next": "التالي",
+    "getStarted": "ابدأ الآن"
+  },
+  "errors": {
+    "networkError": "خطأ في الشبكة",
+    "serverError": "خطأ في الخادم",
+    "notFound": "غير موجود",
+    "unauthorized": "غير مصرح",
+    "tryAgain": "حاول مرة أخرى"
+  }
+}
